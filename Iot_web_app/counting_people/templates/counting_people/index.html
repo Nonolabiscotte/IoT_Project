@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'counting_people/style.css' %}">
+  </head>
+  <body>
+    <div class="main_title">
+      <h2>Welcome to the ECAM IoT Project</h2>
+    </div>
+    <div class="intro_question">
+      <p>Looking for a working room or an empty laboratory?</p>
+    </div>
+    <div class="list_room">
+      {% if created_room %}
+      <ul>
+        {% for room in created_room %}
+          <li><a href="/counting_people/home/{{room.code}}">{{room.code}}</a></li>
+        {% endfor%}
+      </ul>
+      {% else %}
+        <<p>No rooms have been created yet</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

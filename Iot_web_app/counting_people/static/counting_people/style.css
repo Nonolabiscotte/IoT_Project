@@ -1,0 +1,37 @@
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+
+}
+html {
+    background: url("images/background.jpg") no-repeat;
+}
+body{
+    vertical-align: middle;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.list_room {
+  text-align: center;
+  font-size: 24px;
+  margin: 5%;
+
+}
+
+.main_title{
+  text-align: center;
+  margin-top: 5%;
+}
+
+.intro_question{
+  text-align: center;
+}
+
+.list_info_room{
+  text-align: center;
+}
+
+/*mise en forme des liens*/

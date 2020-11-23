@@ -1,0 +1,21 @@
+<head>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'counting_people/style.css' %}">
+  <title>Data from the room {{room.code}}</title>
+</head>
+<body>
+  <div class="list_info_room">
+    <h3>Data from the {{room.classification}} {{room.code}}</h3>
+    {% for data in data_room %}
+      <ul>
+        <li>Date: {{data.date_published}}</li>
+        <li>People in the room: {{data.people_in_room}}</li>
+        <li>Number of people that have entered in the room today: {{data.people_entered}}</li>
+        <li>Number of people that got out of the room today: {{data.people_got_out}}</li>
+      </ul>
+    {% endfor %}
+
+    <canvas id="mychart" width="300" height="300"></canvas>
+
+  </div>
+</body>
