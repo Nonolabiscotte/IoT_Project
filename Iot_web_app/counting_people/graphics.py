@@ -8,7 +8,7 @@ def get_data_from_a_room(code_id): # retourne les 24 derniers objets queryset or
     date_of_the_measurement = []
     for data in data_room:
         number_of_people.append(data.people_in_room)
-        date_of_the_measurement.append(data.date_published)
+        date_of_the_measurement.append(data.date_published.hour)
     df = pd.DataFrame({'number_of_people': number_of_people, 'Date': date_of_the_measurement})
     return df
 

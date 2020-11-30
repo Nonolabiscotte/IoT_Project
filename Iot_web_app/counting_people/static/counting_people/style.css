@@ -32,6 +32,8 @@ body{
 
 .list_info_room{
   text-align: center;
+  background-color: #ffffff;
+  opacity: 0.6;
 }
 
 /*mise en forme des liens*/

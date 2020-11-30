@@ -8,14 +8,11 @@
     <h3>Data from the {{room.classification}} {{room.code}}</h3>
     {% for data in data_room %}
       <ul>
-        <li>Date: {{data.date_published}}</li>
+        <li>Time: {{data.date_published.hour}}h {{data.date_published.minute}}min</li>
         <li>People in the room: {{data.people_in_room}}</li>
         <li>Number of people that have entered in the room today: {{data.people_entered}}</li>
         <li>Number of people that got out of the room today: {{data.people_got_out}}</li>
       </ul>
     {% endfor %}
-
-    <canvas id="mychart" width="300" height="300"></canvas>
-
   </div>
 </body>
